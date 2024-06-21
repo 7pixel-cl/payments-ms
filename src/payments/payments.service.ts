@@ -44,8 +44,7 @@ export class PaymentsService {
 
     let event: Stripe.Event;
 
-    // const endpointSecret =
-    //   'whsec_721abedc437b45c11e19c2dc8854dece7c46dcd83ca21d5fd8cf4f3f012018e2';
+  
     const endpointSecret = envs.stripeEndpointSecret;
     try {
       event = this.stripe.webhooks.constructEvent(
